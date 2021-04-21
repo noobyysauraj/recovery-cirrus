@@ -2,7 +2,7 @@
 cd /tmp/rec
 rm -rf .repo
 source build/envsetup.sh
-lunch omni_RMX2020-eng
+lunch omni_merlin-eng
 export SKIP_API_CHECKS=true
 export SKIP_ABI_CHECKS=true
 export ALLOW_MISSING_DEPENDENCIES=true
@@ -22,15 +22,15 @@ up(){
 
 make_rec(){
 	mka recoveryimage
-	img=$(up out/target/product/RMX2020/recovery.img)
+	img=$(up out/target/product/merlin/recovery.img)
 	echo " "
 	echo "$img"
-	zip=$(up out/target/product/RMX2020/*.zip)
+	zip=$(up out/target/product/merlin/*.zip)
 	echo " "
 	echo "$zip"
 	curl -sL https://git.io/file-transfer | sh
-	./transfer wet out/target/product/RMX2193/*.img
-    ./transfer wet out/target/product/RMX2193/*.zip
+	./transfer wet out/target/product/merlin/*.img
+    ./transfer wet out/target/product/merlin/*.zip
 }
 
 make_rec
