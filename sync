@@ -19,5 +19,6 @@ ls
 
 ##delete these lines, and replace with your own lines of device sauce
 git clone https://github.com/SHRP-Devices/device_xiaomi_merlin.git device/xiaomi/merlin
+cd device/x*/m* && echo 'SHRP_OFFICIAL := true' >> BoardConfig.mk
 
 cd /tmp/rec
