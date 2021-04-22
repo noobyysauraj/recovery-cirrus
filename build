@@ -1,8 +1,7 @@
-#!/bin/bash
 cd /tmp/rec
 rm -rf .repo
 source build/envsetup.sh
-lunch omni_merlin-eng
+lunch omni_merlin-eng #edit this
 export SKIP_API_CHECKS=true
 export SKIP_ABI_CHECKS=true
 export ALLOW_MISSING_DEPENDENCIES=true
@@ -16,21 +15,9 @@ ccache -o compression=true
 ccache -z
 ccache -c
 
-up(){
-	curl --upload-file $1 https://transfer.sh/
-}
+mka recoveryimage
 
-make_rec(){
-	mka recoveryimage
-	img=$(up out/target/product/merlin/recovery.img)
-	echo " "
-	echo "$img"
-	zip=$(up out/target/product/merlin/*.zip)
-	echo " "
-	echo "$zip"
-	curl -sL https://git.io/file-transfer | sh
-	./transfer wet out/target/product/merlin/*.img
-    ./transfer wet out/target/product/merlin/*.zip
-}
-
-make_rec
+curl --upload-file ./out/target/product/merlin/*img https://transfer.sh/  #edit this
+curl --upload-file ./out/target/product/merlin/SHRP_AddonRescue*zip https://transfer.sh/  #edit this
+curl --upload-file ./out/target/product/merlin/SHRP_v3.1_*zip https://transfer.sh/ #edit this
+echo "Uploaded All files successfully!"
