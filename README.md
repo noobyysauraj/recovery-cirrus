@@ -15,6 +15,4 @@ I tried to explian every steps by comments! Try to read those throughly!
 6. In next page give password and Confirm password
 7. Setup is done for cirrus ci in your account! You can close the tab now!
 8. Build should start on cirrus
-
-10. **optional:** If your build fails due to kernel issues, then use prebuilt kernel
-11. see "example" branch to see how stuff is done, **if you know what youre doing**, you can edit other vaules too
+9. See # instructions on which lines to edit to make recovery
