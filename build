@@ -1,3 +1,4 @@
+#!/bin/bash
 cd /tmp/rec
 rm -rf .repo
 source build/envsetup.sh
@@ -17,7 +18,7 @@ ccache -c
 
 mka recoveryimage
 
-curl --upload-file ./out/target/product/merlin/*img https://transfer.sh/  #edit this
+curl --upload-file ./out/target/product/merlin/recovery.img https://transfer.sh/  #edit this
 curl --upload-file ./out/target/product/merlin/SHRP_AddonRescue*zip https://transfer.sh/  #edit this
 curl --upload-file ./out/target/product/merlin/SHRP_v3.1_*zip https://transfer.sh/ #edit this
-echo "Uploaded All files successfully!"
+echo "/nUploaded All files successfully!"
