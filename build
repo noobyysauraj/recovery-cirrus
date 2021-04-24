@@ -3,15 +3,14 @@ cd /tmp/rec
 rm -rf .repo
 source build/envsetup.sh
 lunch omni_merlin-eng #edit this
-export SKIP_API_CHECKS=true
-export SKIP_ABI_CHECKS=true
-export ALLOW_MISSING_DEPENDENCIES=true
-cd /tmp/rec
-export CCACHE_DIR=/tmp/ccache  ##use additional flags if you need(optional)
+export SKIP_API_CHECKS=true ##use additional flags if you need(optional)
+export SKIP_ABI_CHECKS=true ##use additional flags if you need(optional)
+export ALLOW_MISSING_DEPENDENCIES=true ##use additional flags if you need(optional)
+#necessary flags
+export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
-
-ccache -M 30G
+ccache -M 40G
 ccache -o compression=true
 ccache -z
 ccache -c
