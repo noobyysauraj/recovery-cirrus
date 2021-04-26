@@ -20,9 +20,9 @@ ls
 ##delete these lines, and replace with your own lines of device sauce
 git clone https://github.com/SHRP-Devices/device_xiaomi_merlin.git device/xiaomi/merlin
 cd device/Xiaomi/merlin 
-echo 'INC_IN_REC_ADDON_1 := true' >> Board config.mk
-echo 'INC_IN_REC_ADDON_2 := true' >> Board config.mk
-echo 'INC_IN_REC_ADDON_3 := true' >> Board config.mk
-echo 'INC_IN_REC_ADDON_4 := true' >> Board config.mk
+echo 'INC_IN_REC_ADDON_1 := true' >> BoardConfig.mk
+echo 'INC_IN_REC_ADDON_2 := true' >> BoardConfig.mk
+echo 'INC_IN_REC_ADDON_3 := true' >> BoardConfig.mk
+echo 'INC_IN_REC_ADDON_4 := true' >> BoardConfig.mk
 
 cd /tmp/rec
