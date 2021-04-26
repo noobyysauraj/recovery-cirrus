@@ -1,8 +1,9 @@
+
 #!/bin/bash
 cd /tmp/rec
 rm -rf .repo
 source build/envsetup.sh
-lunch omni_lancelot-eng #edit this
+lunch omni_merlin-eng #edit this
 export SKIP_API_CHECKS=true ##use additional flags if you need(optional)
 export SKIP_ABI_CHECKS=true ##use additional flags if you need(optional)
 export ALLOW_MISSING_DEPENDENCIES=true ##use additional flags if you need(optional)
@@ -10,28 +11,15 @@ export ALLOW_MISSING_DEPENDENCIES=true ##use additional flags if you need(option
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
-ccache -M 50G
+ccache -M 40G
 #ccache -o compression=true
 ccache -z
 ccache -c
 
 mka recoveryimage
 
-curl --upload-file ./out/target/product/lancelot/recovery.img https://transfer.sh/
+curl --upload-file ./out/target/product/merlin/recovery.img https://transfer.sh/  #edit this
+curl --upload-file ./out/target/product/merlin/SHRP_AddonRescue*zip https://transfer.sh/  #edit this
+curl --upload-file ./out/target/product/merlin/SHRP_v3.1_*zip https://transfer.sh/ #edit this
+echo "/nUploaded All files successfully!"
 
-echo "
-
-Uploaded recovery.img
-"  #edit this
-curl --upload-file ./out/target/product/lancelot/SHRP_AddonRescue*zip https://transfer.sh/
-echo "
-
-uploaded Addon.zip"  #edit this
-curl --upload-file ./out/target/product/lancelot/SHRP_v3.1_*zip https://transfer.sh/
-echo "
-
-Uploaded SHRP.zip
-" #edit this
-echo "
-
-Uploaded All files successfully!"
