@@ -17,17 +17,17 @@ ccache -c
 
 mka recoveryimage
 
-curl --upload-file ./out/target/product/merlin/recovery.img https://transfer.sh/
+curl --upload-file ./out/target/product/lancelot/recovery.img https://transfer.sh/
 
 echo "
 
 Uploaded recovery.img
 "  #edit this
-curl --upload-file ./out/target/product/merlin/SHRP_AddonRescue*zip https://transfer.sh/
+curl --upload-file ./out/target/product/lancelot/SHRP_AddonRescue*zip https://transfer.sh/
 echo "
 
 uploaded Addon.zip"  #edit this
-curl --upload-file ./out/target/product/merlin/SHRP_v3.1_*zip https://transfer.sh/
+curl --upload-file ./out/target/product/lancelot/SHRP_v3.1_*zip https://transfer.sh/
 echo "
 
 Uploaded SHRP.zip
