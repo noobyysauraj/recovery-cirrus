@@ -24,4 +24,4 @@ curl --upload-file ./out/target/product/merlin/SHRP_v3.1_*zip https://transfer.s
 echo "
 
 Uploaded All files successfully!"
-
+#start
