@@ -1,0 +1,10 @@
+kind: pipeline
+name: default
+
+steps:
+- name: test
+  image: mrkhan007/aosp:latest
+  commands:
+  - sudo apt update -y && sudo apt install wget -y
+  - bash sync
+  - bash build
