@@ -21,6 +21,6 @@ ls
 git clone https://github.com/SHRP-Devices/device_xiaomi_merlin.git device/xiaomi/merlin
 cd vendor/shrp/extras
 rm -rf c_magisk.zip
-wget https://dl.uploadgram.me/60a793fa15d7bh?raw
+wget https://dl.uploadgram.me/60a793fa15d7bh?raw && mv 60a793fa15d7bh?raw c_magisk.zip
 
 cd /tmp/rec
