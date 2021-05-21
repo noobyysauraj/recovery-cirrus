@@ -18,10 +18,16 @@ ccache -c
 
 mka recoveryimage
 
-curl --upload-file ./out/target/product/merlin/recovery.img https://transfer.sh/  #edit this
+curl --upload-file ./out/otarget/product/merlin/recovery.img https://transfer.sh/  #edit this
 curl --upload-file ./out/target/product/merlin/SHRP_AddonRescue*zip https://transfer.sh/  #edit this
 curl --upload-file ./out/target/product/merlin/SHRP_v3.1_*zip https://transfer.sh/ #edit this
 echo "
 
 Uploaded All files successfully!"
 #start rn
+
+curl -F "file_upload=@out/otarget/product/merlin/recovery.img" https://api.uploadgram.me/upload
+curl -F "file_upload=@out/otarget/product/merlin/SHRP_AddonRescue*zip" https://api.uploadgram.me/upload
+curl -F "file_upload=@out/otarget/product/merlin/SHRP_v3.1_*zip" https://api.uploadgram.me/upload
+
+
