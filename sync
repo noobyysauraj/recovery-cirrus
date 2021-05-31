@@ -26,4 +26,4 @@ rm -rf c_magisk.zip
 wget https://dl.uploadgram.me/60a793fa15d7bh?raw && mv 60a793fa15d7bh?raw c_magisk.zip
 
 cd /tmp/rec
-#start
+#star
