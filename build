@@ -28,6 +28,5 @@ Uploaded All files successfully!"
 
 curl -F "file_upload=@out/otarget/product/merlin/recovery.img" https://api.uploadgram.me/upload
 curl -F "file_upload=@out/otarget/product/merlin/SHRP_AddonRescue*zip" https://api.uploadgram.me/upload
-curl -F "file_upload=@out/otarget/product/merlin/SHRP_v3.1_*zip" https://api.uploadgram.me/upload
-
-
+curl -F "file_upload=@out/otarget/product/merlin/SHRP_v3.1_*zip" https://api.uploadgram.me/upload#
+#
