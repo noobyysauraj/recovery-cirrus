@@ -19,6 +19,8 @@ ls
 
 #delete these lines, and replace with your own lines of device sauce
 git clone https://github.com/SHRP-Devices/device_xiaomi_merlin.git device/xiaomi/merlin
+rm -rf vendor/shrp
+git clone https://github.com/SHRP/android_vendor_shrp.git vendor/shrp -b v3
 
 #
 cd /tmp/rec
