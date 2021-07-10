@@ -1,6 +1,7 @@
 #!/bin/bash
 cd /tmp/rec
 rm -rf .repo
+ls build
 source build/envsetup.sh
 lunch omni_merlin-eng #edit this
 export SKIP_API_CHECKS=true ##use additional flags if you need(optional)
