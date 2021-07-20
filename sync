@@ -18,7 +18,7 @@ pwd
 ls
 
 #delete these lines, and replace with your own lines of device sauce
-git clone https://github.com/SHRP-Devices/device_xiaomi_merlin.git device/xiaomi/merlin
+git clone https://github.com/SHRP-Devices/device_xiaomi_merlin.git -b android-10.0-R device/xiaomi/merlin
 echo 'TW_TORCH_PATH := "/sys/class/leds/led:torch_0' >> device/xiaomi/merlin/BoardConfig.mk
 
 cd /tmp/rec
