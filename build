@@ -32,3 +32,4 @@ echo "
 curl --upload-file ./temporary/merlin/SHRP_v3.1_*zip https://transfer.sh/ #edit this
 echo "
 "
+#
