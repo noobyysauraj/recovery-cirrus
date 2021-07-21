@@ -1,24 +1,27 @@
 #!/bin/bash
 sudo apt install wget
-MANIFEST=git://github.com/SHRP/platform_manifest_twrp_omni.git
-BRANCH=v3_10.0 
+sudo apt-get install tmate
+tmate
+tmate show-message
 
 mkdir -p /tmp/rec
 cd /tmp/rec
 
 # Repo init command, that -device,-mips,-darwin,-notdefault part will save you more time and storage to sync, add more according to your rom and choice.Optimization is welcomed! Let's make it quit, and with depth=1 so that no unnecessary things.
-repo init --no-repo-verify --depth=1 -u "$MANIFEST" -b "$BRANCH" -g default,-device,-mips,-darwin,-notdefault
-git config --global user.name "Box In A Box"
-git config --global user.email "evanferrao@gmail.com"
+git config --global user.name "noobyysauraj"
+git config --global user.email "gitsauraj@gmail.com"
 
-# Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+# Initialize the latest stable branch
+repo init -u git://github.com/PitchBlackRecoveryProject/manifest_pb -b android-11.0
+
+# Sync the latest stable branch
+repo sync
+
 
 pwd
 ls
 
 #delete these lines, and replace with your own lines of device sauce
-git clone https://github.com/SHRP-Devices/device_xiaomi_merlin.git -b android-10.0-R device/xiaomi/merlin
-echo 'TW_TORCH_PATH := "/sys/class/leds/torch-light0' >> device/xiaomi/merlin/BoardConfig.mk
+git clone https://github.com/noobyysauraj/pbrp_realme_RMX2151_a11.git device/realme/RMX2151
 #
 cd /tmp/rec
