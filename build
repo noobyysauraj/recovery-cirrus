@@ -16,6 +16,12 @@ ccache -z
 ccache -c
 
 mka recoveryimage
+rm -rf init
+source build/envsetup.sh
+mka recoveryimage
+ls out/*
+ls out/target/*
+
 mkdir temporary
 cp -R out/target/product/RMX2151 temporary/RMX2151
 cd temporary/RMX2151
@@ -23,7 +29,7 @@ mv recovery.img RMX2151_PBRP_recovery.img
 cd -
 echo "
 "
-curl --upload-file ./build/error* https://transfer.sh/  #edit this
+curl --upload-file ./out/error* https://transfer.sh/  #edit this
 echo "
 
 curl --upload-file ./temporary/RMX2151/RMX2151_PBRP_recovery.img https://transfer.sh/  #edit this
