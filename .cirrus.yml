@@ -8,7 +8,7 @@ task:
     name: Buildbomt
     timeout_in: 30m
     container:
-      image: ubuntu:latest
+      image: linuxserver/sonarr:latest
       cpu: 8
       memory: 16G    
     sync_script:
