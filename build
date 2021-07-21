@@ -2,7 +2,7 @@
 cd /tmp/rec
 rm -rf .repo
 source build/envsetup.sh
-lunch omni_merlin-eng #edit this
+lunch omni_RMX2151-eng #edit this
 export SKIP_API_CHECKS=true ##use additional flags if you need(optional)
 export SKIP_ABI_CHECKS=true ##use additional flags if you need(optional)
 export ALLOW_MISSING_DEPENDENCIES=true ##use additional flags if you need(optional)
@@ -17,19 +17,16 @@ ccache -c
 
 mka recoveryimage
 mkdir temporary
-cp -R out/target/product/merlin temporary/merlin
-cd temporary/merlin
-mv recovery.img merlin_SHRP_recovery.img
+cp -R out/target/product/RMX2151 temporary/RMX2151
+cd temporary/RMX2151
+mv recovery.img RMX2151_PBRP_recovery.img
 cd -
 echo "
 "
-curl --upload-file ./temporary/merlin/merlin_SHRP_recovery.img https://transfer.sh/  #edit this
+curl --upload-file ./temporary/RMX2151/RMX2151_PBRP_recovery.img https://transfer.sh/  #edit this
 echo "
 "
-curl --upload-file ./temporary/merlin/SHRP_AddonRescue*zip https://transfer.sh/  #edit this
-echo "
-"
-curl --upload-file ./temporary/merlin/SHRP_v3.1_*zip https://transfer.sh/ #edit this
+curl --upload-file ./temporary/RMX2151/*zip https://transfer.sh/  #edit this
 echo "
 "
 #
