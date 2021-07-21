@@ -1,8 +1,12 @@
 #!/bin/bash
 sudo apt install wget
 sudo apt-get install tmate
-tmate
-tmate show-message
+sudo apt update
+sudo apt install git
+git clone https://github.com/akhilnarang/scripts
+cd scripts
+bash setup/android_build_env.sh
+
 
 mkdir -p /tmp/rec
 cd /tmp/rec
