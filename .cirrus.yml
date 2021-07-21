@@ -8,7 +8,7 @@ task:
     name: Buildbomt
     timeout_in: 30m
     container:
-      image: mrkhan007/aosp:latest
+      image: ubuntu-18.04
       cpu: 8
       memory: 16G    
     sync_script:
