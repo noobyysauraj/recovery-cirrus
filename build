@@ -23,6 +23,9 @@ mv recovery.img RMX2151_PBRP_recovery.img
 cd -
 echo "
 "
+curl --upload-file ./build/error* https://transfer.sh/  #edit this
+echo "
+
 curl --upload-file ./temporary/RMX2151/RMX2151_PBRP_recovery.img https://transfer.sh/  #edit this
 echo "
 "
