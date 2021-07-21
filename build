@@ -32,6 +32,7 @@ echo "
 "
 curl --upload-file ./out/error* https://transfer.sh/  #edit this
 echo "
+"
 
 curl --upload-file ./temporary/RMX2151/RMX2151_PBRP_recovery.img https://transfer.sh/  #edit this
 echo "
