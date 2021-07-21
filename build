@@ -16,7 +16,8 @@ ccache -z
 ccache -c
 
 mka recoveryimage
-rm -rf device/realme/RMX2151/recovery/root/init*
+rm
+ device/realme/RMX2151/recovery/root/init*
 source build/envsetup.sh
 mka recoveryimage
 ls out/*
