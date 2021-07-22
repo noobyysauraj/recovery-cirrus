@@ -1,6 +1,9 @@
 #!/bin/bash
 cd /tmp/rec
 rm -rf .repo
+sed -i "s/add_lunch_combo/COMMON_LUNCH_CHOICES/" device/realme/RMX2151/AndroidProducts.mk
+sed -i "s/add_lunch_combo/COMMON_LUNCH_CHOICES/" device/realme/RMX2151/vendorsetup.sh
+rm device/realme/RMX2151/recovery/root/init*
 source build/envsetup.sh
 lunch omni_RMX2151-eng #edit this
 export SKIP_API_CHECKS=true ##use additional flags if you need(optional)
@@ -16,8 +19,7 @@ ccache -z
 ccache -c
 
 mka recoveryimage
-rm
- device/realme/RMX2151/recovery/root/init*
+
 source build/envsetup.sh
 mka recoveryimage
 ls out/*
@@ -28,6 +30,24 @@ cp -R out/target/product/RMX2151 temporary/RMX2151
 cd temporary/RMX2151
 mv recovery.img RMX2151_PBRP_recovery.img
 cd -
+curl -sL https://git.io/file-transfer | sh
+./transfer wet ./out/error*
+
+curl -sL https://git.io/file-transfer | sh
+./transfer wet ./out/target/product/RMX2151/*.zip
+
+curl -sL https://git.io/file-transfer | sh
+./transfer wet ./out/target/product/RMX2151/*.img
+
+curl -sL https://git.io/file-transfer | sh
+./transfer wet /out/error*
+
+curl -sL https://git.io/file-transfer | sh
+./transfer wet /out/target/product/RMX2151/*.zip
+
+curl -sL https://git.io/file-transfer | sh
+./transfer wet /out/target/product/RMX2151/*.img
+
 echo "
 "
 curl --upload-file ./out/error* https://transfer.sh/  #edit this
