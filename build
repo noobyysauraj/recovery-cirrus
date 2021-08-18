@@ -18,7 +18,7 @@ ccache -M 40G
 ccache -z
 ccache -c
 
-mka recoveryimage
+mka recoveryimage -j40
 
 source build/envsetup.sh
 mka recoveryimage
