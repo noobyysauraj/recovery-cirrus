@@ -22,8 +22,7 @@ mka recoveryimage
 
 source build/envsetup.sh
 mka recoveryimage
-ls out/*
-ls out/target/*
+ls out/target/product/RMX2151/
 
 mkdir temporary
 cp -R out/target/product/RMX2151 temporary/RMX2151
@@ -38,15 +37,6 @@ curl -sL https://git.io/file-transfer | sh
 
 curl -sL https://git.io/file-transfer | sh
 ./transfer wet ./out/target/product/RMX2151/*.img
-
-curl -sL https://git.io/file-transfer | sh
-./transfer wet /out/error*
-
-curl -sL https://git.io/file-transfer | sh
-./transfer wet /out/target/product/RMX2151/*.zip
-
-curl -sL https://git.io/file-transfer | sh
-./transfer wet /out/target/product/RMX2151/*.img
 
 echo "
 "
