@@ -19,7 +19,7 @@ git config --global user.email "gitsauraj@gmail.com"
 repo init -u git://github.com/PitchBlackRecoveryProject/manifest_pb -b android-11.0
 
 # Sync the latest stable branch
-repo sync
+repo sync -j40
 
 
 pwd
