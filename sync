@@ -29,7 +29,7 @@ pwd
 ls
 
 #delete these lines, and replace with your own lines of device sauce
-git clone https://github.com/noobyysauraj/pbrp_realme_RMX2151_a11.git device/realme/RMX2151
+git clone https://github.com/noobyysauraj/pbrp_realme_RMX2151.git device/realme/RMX2151
 #
 cd /tmp/rec
 #######################################################################################################################
