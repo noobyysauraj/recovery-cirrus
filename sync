@@ -29,7 +29,10 @@ pwd
 ls
 
 #delete these lines, and replace with your own lines of device sauce
-git clone https://github.com/noobyysauraj/pbrp_realme_RMX2151.git device/realme/RMX2151
+git clone https://github.com/noobyysauraj/twrp_RMX2151_a11 device/realme/RMX2151
+https://github.com/noobyysauraj/proprietary_vendor_realme_RMX2151 vendor/realme/RMX2151
+sed -i "s/twrp/omni/" device/realme/RMX2151/*.mk
+mv device/realme/RMX2151/twrp*.mk device/realme/RMX2151/omni_RMX2151.mk 
 #
 cd /tmp/rec
 #####################
