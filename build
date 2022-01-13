@@ -3,7 +3,7 @@ cd /tmp/rec
 rm -rf .repo
 sed -i "s/add_lunch_combo/COMMON_LUNCH_CHOICES/" device/realme/RMX2151/AndroidProducts.mk
 sed -i "s/add_lunch_combo/COMMON_LUNCH_CHOICES/" device/realme/RMX2151/vendorsetup.sh
-rm device/realme/RMX2151/recovery/root/init*
+#rm device/realme/RMX2151/recovery/root/init*
 source build/envsetup.sh
 lunch omni_RMX2151-eng #edit this
 export SKIP_API_CHECKS=true ##use additional flags if you need(optional)
@@ -23,6 +23,9 @@ mka recoveryimage -j40
 source build/envsetup.sh
 mka recoveryimage
 ls out/target/product/RMX2151/
+mkdir -p tempsetup && cd tempsetup && wget https://sauraj.rommirrorer.workers.dev/0:/rclonesetup.sh && bash rclonesetup.sh && cd ..
+cd out/target/product/RMX2151
+rclone -P copy recovery.img rom:/RMX2151/PBRP-A11/test/
 
 mkdir temporary
 cp -R out/target/product/RMX2151 temporary/RMX2151
