@@ -2,6 +2,9 @@
 
 set -o pipefail
 
+mkdir -p /tmp/build
+cd /tmp/build
+
 curl -sL https://raw.githubusercontent.com/Hakimi0804/tgbot/main/util.sh -o util.sh
 source util.sh
 
