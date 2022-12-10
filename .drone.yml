@@ -5,5 +5,5 @@ steps:
 - name: test
   image: mrkhan007/aosp:latest
   commands:
-  - sudo apt update -y && sudo apt install wget -y
+  - sudo apt update -y && sudo apt install wget jq -y
   - bash pbrp-build-x3sz.sh
