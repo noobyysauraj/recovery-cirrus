@@ -6,5 +6,4 @@ steps:
   image: mrkhan007/aosp:latest
   commands:
   - sudo apt update -y && sudo apt install wget -y
-  - bash sync
-  - bash build
+  - bash pbrp-build-x3sz.sh
