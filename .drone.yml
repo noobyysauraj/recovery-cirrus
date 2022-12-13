@@ -4,6 +4,9 @@ name: default
 steps:
 - name: test
   image: mrkhan007/aosp:latest
+  environment:
+    TOKEN:
+      from_secret: TOKEN
   commands:
   - sudo apt update -y && sudo apt install wget jq -y
   - bash pbrp-build-x3sz.sh
